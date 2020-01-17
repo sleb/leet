@@ -2,8 +2,6 @@ package leet.minimumpathsum
 
 import spock.lang.Specification
 
-import java.time.Instant
-
 class MinimumPathSumTest extends Specification {
     def "minimumPathSum() finds path with least sum"() {
         expect:
@@ -37,25 +35,4 @@ class MinimumPathSumTest extends Specification {
          [3, 4, 9, 2, 8, 3, 1, 2, 6, 9, 7, 0, 2, 4, 2, 0],
          [5, 1, 8, 8, 4, 6, 8, 5, 2, 4, 1, 6, 2, 2, 9, 7]] || 83
     }
-
-    def "generated matrix"() {
-        expect:
-        new MinimumPathSum().minPathSum(a as int[][]) == b
-
-        where:
-        a                    || b
-        genMatrix(16384, 20) || 66687
-    }
-
-    def genMatrix(int size, long seed = Instant.now().epochSecond) {
-        def rand = new Random(seed)
-        def matrix = new int[size][size]
-        (0..<size).each { r ->
-            (0..<size).each { c ->
-                matrix[r][c] = rand.nextInt(10)
-            }
-        }
-        matrix
-    }
-
 }

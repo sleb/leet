@@ -10,8 +10,8 @@ class ReverseIntegerTest extends Specification {
         where:
         a          || b
         1534236469 || 0
-        123        || 312
-        120        || 12
+        123        || 321
+        120        || 21
         -5467      || -7645
     }
 }
