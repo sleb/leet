@@ -26,6 +26,10 @@ class IntToRomanTest extends Specification {
         15   || "XV"
         16   || "XVI"
         58   || "LVIII"
+        240  || "CCXL"
         1994 || "MCMXCIV"
+        2500 || "MMD"
+        3499 || "MMMCDXCIX"
+        3999 || "MMMCMXCIX"
     }
 }
